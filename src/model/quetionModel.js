@@ -1,0 +1,51 @@
+const mongoose=require("mongoose")
+
+const questionSchema=new mongoose.Schema({
+    question:{
+        type:String,
+        require:true,
+        trim:true
+    },
+    option_1:{
+        type:String,
+        require:true,
+        trim:true
+    },
+    option_2:{
+        type:String,
+        require:true,
+        trim:true
+    },
+    option_3:{
+        type:String,
+        require:true,
+        trim:true
+    },
+    option_4:{
+        type:String,
+        require:true,
+        trim:true
+    },
+    correctAnswer:{
+        type:String,
+        require:true,
+        trim:true
+    },
+    attachmentsImage:{
+        type:String,
+        default:"NA",
+        trim:true
+    },
+    attachmentsVideo:{
+        type:String,
+        default:"NA",
+        trim:true
+    },
+    equetion:{
+        type:String,
+        default:"NA",
+        trim:true
+    }
+
+},{timestamps:true})
+module.exports=mongoose.model("Question",questionSchema)
